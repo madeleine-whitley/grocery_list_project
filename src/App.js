@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import ItemList from './components/items/ItemList';
+import ItemForm from './components/items/ItemForm';
 
 class App extends Component {
   state = { item: [
@@ -13,7 +14,7 @@ class App extends Component {
     return (
       <>
         <h1>Grocery List</h1>
-        <ItemList item={item} listName="Coding" />
+        <ItemList item={item} listName="Items" />
       </>
     )
   }
