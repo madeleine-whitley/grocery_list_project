@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import ItemList from './components/item/ItemList';
+import ItemList from './components/items/ItemList';
 
 class App extends Component {
   state = { item: [
