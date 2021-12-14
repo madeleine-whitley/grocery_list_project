@@ -1,12 +1,13 @@
 import { Component } from 'react';
+import Item from './components/items/Item';
 import ItemList from './components/items/ItemList';
 import ItemForm from './components/items/ItemForm';
 
 class App extends Component {
   state = { items: [
-    { id: 1, title: 'Learn Ruby', desc: 'learn ruby langauge', complete: true, },
-    { id: 2, title: 'Learn JS', desc: 'learn js langauge', complete: true, },
-    { id: 3, title: 'Learn React', desc: 'learn React technology', complete: false, },
+    { id: 1, title: 'Steak', desc: 'Meat isle', complete: true, },
+    { id: 2, title: 'Bread', desc: 'Grain isle', complete: true, },
+    { id: 3, title: 'Apples', desc: 'fruit isle', complete: false, },
   ] }
 
   // all of crud action functions will be in a HOC
@@ -22,16 +23,22 @@ class App extends Component {
     // include id because not connected to db
     // const newTodo = { id: this.getUniqId(), title: incomingItem.title, desc: incomingItem.desc, complete: incomingItem.complete  }
     const newItem = { id: this.getUniqId(), ...incomingItem  }
-    // this.setState({ items: [...items, newItem ]})
+     this.setState({ items: [...items, newItem ]})
   }
 
+
+      
+    
+    
+  
   render() {
     const { items } = this.state
     return (
       <>
-        <h1>My Items</h1>
+        <h1>Groceries</h1>
         <ItemForm addItem={this.addItem} />
-        <ItemList items={items} listName="Items" />
+        <ItemList items={items} listName="Grocery" />
+    
       </>
     )
   }

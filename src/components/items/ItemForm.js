@@ -34,14 +34,14 @@ class ItemForm extends Component {
           onChange={this.handleChange}
           // optional
           required 
-          placeholder="Todo title"
+          placeholder="Grocery item"
         />
         <input
           name="desc"
           value={desc}
           onChange={this.handleChange}
           required 
-          placeholder="Todo Description"
+          placeholder="Price"
         />
         <button type="submit">Submit</button>
       </form>
