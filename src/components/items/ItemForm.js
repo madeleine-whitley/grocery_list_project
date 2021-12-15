@@ -17,11 +17,11 @@ class ItemForm extends Component {
     // add to the list 
     this.props.addItem(this.state)
     // clear out form
-    this.setState({ title: '', desc: '', complete: false })
+    this.setState({ title: '', price: 0, complete: false })
   }
 
   render() {
-    const { title, desc } = this.state
+    const { title, price} = this.state
     return (
       <form onSubmit={this.handleSubmit}>
         <input
@@ -37,11 +37,12 @@ class ItemForm extends Component {
           placeholder="Grocery item"
         />
         <input
-          name="desc"
-          value={desc}
+          name="price"
+          value={price}
           onChange={this.handleChange}
           required 
           placeholder="Price"
+          type="number"
         />
         <button type="submit">Submit</button>
       </form>

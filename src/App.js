@@ -5,9 +5,9 @@ import ItemForm from './components/items/ItemForm';
 
 class App extends Component {
   state = { items: [
-    { id: 1, title: 'Steak', desc: 'Meat isle', complete: true, },
-    { id: 2, title: 'Bread', desc: 'Grain isle', complete: true, },
-    { id: 3, title: 'Apples', desc: 'fruit isle', complete: false, },
+    { id: 1, title: 'Steak', price: integer, complete: true, },
+    { id: 2, title: 'Bread', price: integer, complete: true, },
+    { id: 3, title: 'Apples', price: integer, complete: false,  },
   ] }
 
   // all of crud action functions will be in a HOC
